@@ -11,49 +11,51 @@
 */
 /* =========================================
    lake_styles.css
-   负责：色彩、字体、伪类、伪元素和生成内容
    ========================================= */
 
 /* 3a. Definition of character encoding */
 @charset "utf-8";
 
 /* 3b. Application of a web font */
-/*
 @font-face {
-    font-family: 'LodgeFont';
-    src: url('lodge_font.woff') format('woff'),
-         url('lodge_font.ttf') format('truetype');
+    font-family: 'cac_champagne';
+    src: url('./cac_champagne.woff') format('woff'),
+         url('./cac_champagne.ttf') format('truetype');
 }
-*/
+
+@font-face {
+    font-family: 'dobkinplain';
+    src: url('./DobkinPlain.woff') format('woff'),
+         url('./DobkinPlain.ttf') format('truetype');
+}
 
 /* 全局色彩设定 */
 body {
     font-family: Georgia, 'Times New Roman', serif;
-    background-color: #e5e5d5; /* 外围淡黄绿背景 */
+    background-color: #e5e5d5; 
     color: #333333;
     line-height: 1.6;
-    background-color: #1a1a1a; /* 主体默认深色背景，确保左侧是黑色的 */
+    background-color: #1a1a1a; 
 }
 
 /* --- 页眉样式 --- */
 header {
-    background-color: #5c2d5c; /* 头部背景深紫色 */
+    background-color: #5c2d5c; 
 }
 
 header nav {
-    background-color: #5c2d5c; /* 导航条深紫色背景 */
+    background-color: #5c2d5c; 
 }
 
 header nav ul {
-    list-style-type: none; /* 3f. 修改列表标记 */
+    list-style-type: none; 
 }
 
-/* 3e. 选择器：嵌套元素 & 3g. 伪类选择器 */
 header nav ul li a {
     color: #ffffff;
     text-decoration: none;
     font-size: 0.85rem;
-    font-family: Arial, Helvetica, sans-serif; /* 导航字体一般是无衬线体 */
+    font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0.5px;
 }
 
@@ -64,12 +66,12 @@ header nav ul li a:hover {
 
 /* --- 左侧主内容列样式 --- */
 #leftcol {
-    background-color: #1a1a1a; /* 左侧背景深黑色 */
+    background-color: #1a1a1a; 
     color: #ffffff;
 }
 
 #leftcol > h1 {
-    font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
+    font-family: 'cac_champagne', 'Brush Script MT', cursive; /* 修改这里 */
     color: #ffffff;
     font-size: 3rem;
     font-weight: normal;
@@ -81,20 +83,18 @@ header nav ul li a:hover {
     margin: 0;
 }
 
-/* 左侧卡片 1：Notes */
 #leftcol aside:nth-of-type(1) {
-    background-color: #f2c4bb; /* 浅粉色 */
-    color: #882222; /* 深红文字 */
+    background-color: #f2c4bb; 
+    color: #882222; 
 }
 
-/* 左侧卡片 2：Upcoming Events */
 #leftcol aside:nth-of-type(2) {
-    background-color: #e6e2aa; /* 浅黄色 */
-    color: #555522; /* 深橄榄绿文字 */
+    background-color: #e6e2aa; 
+    color: #555522; 
 }
 
 #leftcol aside h1 {
-    font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
+    font-family: 'cac_champagne', 'Brush Script MT', cursive; /* 修改这里 */
     font-size: 2rem;
     font-weight: normal;
     margin-top: 0;
@@ -102,7 +102,7 @@ header nav ul li a:hover {
 }
 
 #leftcol aside ul {
-    list-style-type: square; /* 3f. 修改列表标记 */
+    list-style-type: square; 
     font-size: 0.85rem;
 }
 
@@ -119,20 +119,20 @@ header nav ul li a:hover {
 
 /* --- 右侧侧边栏样式 --- */
 #rightcol {
-    background-color: #5c2d5c; /* 右侧深紫色背景 */
+    background-color: #5c2d5c; 
     color: #ffffff;
 }
 
 #rightcol nav h2 {
-    font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
-    color: #f4e5b2; /* 浅黄色标题 */
+    font-family: 'cac_champagne', 'Brush Script MT', cursive; /* 修改这里 */
+    color: #f4e5b2; 
     font-size: 2rem;
     font-weight: normal;
     margin: 20px 0 10px 0;
 }
 
 #rightcol nav ul {
-    list-style-type: none; /* 右侧列表无项目符号 */
+    list-style-type: none; 
 }
 
 #rightcol nav ul li a {
@@ -147,13 +147,13 @@ header nav ul li a:hover {
 
 /* 引用块样式 */
 #rightcol blockquote {
+    font-family: 'dobkinplain', 'Brush Script MT', cursive; /* 修改这里 */
     font-style: italic;
     font-size: 0.9rem;
     position: relative;
     color: #f4e5b2;
 }
 
-/* 3g & 3i. 伪元素和生成内容 (大引号) */
 #rightcol blockquote::before {
     content: "\201C";
     font-size: 3rem;
@@ -161,7 +161,7 @@ header nav ul li a:hover {
     position: absolute;
     left: -15px;
     top: -20px;
-    font-family: Georgia, serif;
+    font-family: Georgia, serif; 
 }
 
 #rightcol blockquote::after {
@@ -174,17 +174,13 @@ header nav ul li a:hover {
     font-family: Georgia, serif;
 }
 
-/* --- 页脚样式  --- */
+/* --- 页脚样式 --- */
 footer {
-    background-color: #333333; /* 明确指定深灰色背景 */
+    background-color: #333333; 
     color: #ffffff;
     font-size: 0.75rem;
 }
 
-footer em {
-    font-style: italic;
-    font-weight: bold;
-}
 footer em {
     font-style: italic;
     font-weight: bold;
