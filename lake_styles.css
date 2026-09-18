@@ -1,0 +1,191 @@
+﻿/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 2
+   Case Problem 4
+   
+   Great Lakescape Lodge Style Sheet
+   Author: Xiyue Wang
+   Date:   9.18
+   
+   Filename: lake_styles.css
+*/
+/* =========================================
+   lake_styles.css
+   负责：色彩、字体、伪类、伪元素和生成内容
+   ========================================= */
+
+/* 3a. Definition of character encoding */
+@charset "utf-8";
+
+/* 3b. Application of a web font */
+/*
+@font-face {
+    font-family: 'LodgeFont';
+    src: url('lodge_font.woff') format('woff'),
+         url('lodge_font.ttf') format('truetype');
+}
+*/
+
+/* 全局色彩设定 */
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background-color: #e5e5d5; /* 外围淡黄绿背景 */
+    color: #333333;
+    line-height: 1.6;
+    background-color: #1a1a1a; /* 主体默认深色背景，确保左侧是黑色的 */
+}
+
+/* --- 页眉样式 --- */
+header {
+    background-color: #5c2d5c; /* 头部背景深紫色 */
+}
+
+header nav {
+    background-color: #5c2d5c; /* 导航条深紫色背景 */
+}
+
+header nav ul {
+    list-style-type: none; /* 3f. 修改列表标记 */
+}
+
+/* 3e. 选择器：嵌套元素 & 3g. 伪类选择器 */
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-family: Arial, Helvetica, sans-serif; /* 导航字体一般是无衬线体 */
+    letter-spacing: 0.5px;
+}
+
+header nav ul li a:hover {
+    color: #e6cce6;
+    text-decoration: underline;
+}
+
+/* --- 左侧主内容列样式 --- */
+#leftcol {
+    background-color: #1a1a1a; /* 左侧背景深黑色 */
+    color: #ffffff;
+}
+
+#leftcol > h1 {
+    font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
+    color: #ffffff;
+    font-size: 3rem;
+    font-weight: normal;
+    margin: 0;
+}
+
+#leftcol > p {
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* 左侧卡片 1：Notes */
+#leftcol aside:nth-of-type(1) {
+    background-color: #f2c4bb; /* 浅粉色 */
+    color: #882222; /* 深红文字 */
+}
+
+/* 左侧卡片 2：Upcoming Events */
+#leftcol aside:nth-of-type(2) {
+    background-color: #e6e2aa; /* 浅黄色 */
+    color: #555522; /* 深橄榄绿文字 */
+}
+
+#leftcol aside h1 {
+    font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
+    font-size: 2rem;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+#leftcol aside ul {
+    list-style-type: square; /* 3f. 修改列表标记 */
+    font-size: 0.85rem;
+}
+
+#leftcol aside h2 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+#leftcol aside p {
+    font-size: 0.85rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* --- 右侧侧边栏样式 --- */
+#rightcol {
+    background-color: #5c2d5c; /* 右侧深紫色背景 */
+    color: #ffffff;
+}
+
+#rightcol nav h2 {
+    font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
+    color: #f4e5b2; /* 浅黄色标题 */
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 20px 0 10px 0;
+}
+
+#rightcol nav ul {
+    list-style-type: none; /* 右侧列表无项目符号 */
+}
+
+#rightcol nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+#rightcol nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* 引用块样式 */
+#rightcol blockquote {
+    font-style: italic;
+    font-size: 0.9rem;
+    position: relative;
+    color: #f4e5b2;
+}
+
+/* 3g & 3i. 伪元素和生成内容 (大引号) */
+#rightcol blockquote::before {
+    content: "\201C";
+    font-size: 3rem;
+    color: #f4e5b2;
+    position: absolute;
+    left: -15px;
+    top: -20px;
+    font-family: Georgia, serif;
+}
+
+#rightcol blockquote::after {
+    content: "\201D";
+    font-size: 3rem;
+    color: #f4e5b2;
+    position: absolute;
+    right: -15px;
+    bottom: -45px;
+    font-family: Georgia, serif;
+}
+
+/* --- 页脚样式  --- */
+footer {
+    background-color: #333333; /* 明确指定深灰色背景 */
+    color: #ffffff;
+    font-size: 0.75rem;
+}
+
+footer em {
+    font-style: italic;
+    font-weight: bold;
+}
+footer em {
+    font-style: italic;
+    font-weight: bold;
+}
